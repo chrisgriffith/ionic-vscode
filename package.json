@@ -1,9 +1,9 @@
 {
-    "name": "ionic2-vscode",
-    "displayName": "ionic2-vscode",
-    "description": "Ionic2 vscode extension! Run ionic-cli commands straight from vscode! This is meant to be used with Ionic 2, to get the correct ionic-cli for Ionic 2 apps please install ionic@beta with npm install ionic@beta.",
+    "name": "ionic4-vscode",
+    "displayName": "ionic4-vscode",
+    "description": "Ionic 4 CLI Code extension! Run ionic-cli commands straight from Code! This is meant to be used with Ionic 4.",
     "version": "1.0.0",
-    "publisher": "jgw9617",
+    "publisher": "cwg2018",
     "engines": {
         "vscode": "^0.10.6"
     },
@@ -11,6 +11,7 @@
         "Other"
     ],
     "activationEvents": [
+        "onCommand:extension.ionicLab",
         "onCommand:extension.ionicServe",
         "onCommand:extension.ionicRunAndroid",
         "onCommand:extension.ionicEmulateAndroid",
@@ -21,6 +22,10 @@
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
+            {
+                "command": "extension.ionicLab",
+                "title": "Ionic Serve --lab"
+            },
             {
                 "command": "extension.ionicServe",
                 "title": "Ionic Serve"
